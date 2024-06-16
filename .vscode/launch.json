@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "fetch docs",
+            "type": "go",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "mode": "auto",
+            "program": ".",
+            "args": ["/Users/jules/irs.key", ".creds", "/Users/jules/src/iracing-data-api-doc"],
+            "env": {
+                "GOFLAGS": "-buildvcs=false"
+            }
+        }
+    ]
+}
