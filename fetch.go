@@ -38,7 +38,7 @@ func main() {
 		log.Panic(err)
 	}
 
-	data, err := api.GetWithCache("data/doc", time.Duration(24)*time.Hour)
+	data, err := api.GetWithCache("data/doc", time.Duration(8)*time.Hour)
 	if err != nil {
 		log.Panic(err)
 	}
