@@ -6,9 +6,6 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 KEYFILE=${1}
 DOC_DIR=${2:-${SCRIPT_DIR}/../iracing-data-api-doc}
 
-echo $SCRIPT_DIR
-echo $DOC_DIR
-
 pushd $SCRIPT_DIR
 
 go run fetch.go ${KEYFILE} .creds ${DOC_DIR}
