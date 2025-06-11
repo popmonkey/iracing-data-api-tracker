@@ -2,13 +2,15 @@
 
 set -ex
 
+GO_BIN=/usr/local/go/bin/go
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 KEYFILE=${1}
 DOC_DIR=${2:-${SCRIPT_DIR}/../iracing-data-api-doc}
 
 pushd $SCRIPT_DIR
 
-go run fetch.go ${KEYFILE} .creds ${DOC_DIR}
+${GO_BIN} run fetch.go ${KEYFILE} .creds ${DOC_DIR}
 
 pushd ${DOC_DIR}
 
